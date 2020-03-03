@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
+
+export interface Card {
+  img: string;
+  title: string;
+  text: string;
+}
 
 @Component({
   selector: 'app-card',
@@ -6,10 +13,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
+  @Input() card: Card;
 
-  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
+
   }
+
 
 }

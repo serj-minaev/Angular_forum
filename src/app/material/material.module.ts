@@ -14,6 +14,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatInputModule} from '@angular/material/input';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatListModule} from '@angular/material/list';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -29,7 +32,10 @@ const MaterialComponents = [
   MatGridListModule,
   MatTabsModule,
   MatAutocompleteModule,
-  MatInputModule
+  MatInputModule,
+  MatExpansionModule,
+  MatButtonToggleModule,
+  MatListModule
 ]
 
 @NgModule({

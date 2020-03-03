@@ -1,0 +1,81 @@
+$color1: #f8f9f9;
+$color2: #CED7DA;
+$color3: #EB1C61;
+$color4: #D9145F;
+$color5: #929696;
+$color6: #B6C9BB;
+$color7: #ED809C;
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+.toolbar-title {
+  margin: 0 0 0 15px;
+}
+
+.info {
+  padding: 15px;
+  color: #f8f9f9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #D9145F;
+  height: 200px;
+
+  img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 0 0 30px 0;
+  }
+}
+
+.sidenav {
+  border: none;
+  background-color: $color2;
+
+  .sidenav-menu {
+
+    .sidenav-menu-item {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.content-area {
+  background-color: $color6;
+}
+
+.ex-container {
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.inner-block {
+  padding: 60px 120px;
+}
+mat-card{
+  padding: 0;
+}
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+
+  div span {
+    margin: 0 0 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner-block {
+    padding: 30px 15px;
+  }
+}
