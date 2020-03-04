@@ -14,6 +14,7 @@ import { DetailComponent } from './detail/detail.component';
 import { UsersComponent } from './users/users.component';
 import { CardComponent } from './card/card.component';
 import {FormsModule} from '@angular/forms';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from '@angular/forms';
     BookmarksComponent,
     DetailComponent,
     UsersComponent,
-    CardComponent
+    CardComponent,
+    AddCategoryComponent
   ],
   imports: [
     BrowserModule,

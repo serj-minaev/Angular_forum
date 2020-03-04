@@ -26,11 +26,21 @@
       <!-- This fills the remaining space of the current row -->
       <span class="example-fill-remaining-space"></span>
       <mat-icon  disabled="true">search</mat-icon>
-      <mat-icon class="cur ml-15">add</mat-icon>
+      <mat-icon class="cur ml-15" [matMenuTriggerFor]="appMenu">add</mat-icon>
       <mat-icon class="cur ml-15" (click)="opened = !opened">more_vert</mat-icon>
 
     </mat-toolbar >
+    <!--Menu-->
 
+
+    <mat-menu #appMenu="matMenu">
+      <button mat-menu-item  routerLink="/categories/add"><mat-icon>plus_one</mat-icon>New category</button>
+      <button mat-menu-item><mat-icon>post_add</mat-icon> New post</button>
+      <button mat-menu-item><mat-icon>person_add</mat-icon>New user</button>
+    </mat-menu>
+
+
+    <!--Menu-->
     <div class="ex-container inner-block">
 
       <router-outlet></router-outlet>
