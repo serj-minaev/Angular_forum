@@ -13,8 +13,13 @@ import { BookmarksComponent } from './bookmarks/bookmarks.component';
 import { DetailComponent } from './detail/detail.component';
 import { UsersComponent } from './users/users.component';
 import { CardComponent } from './card/card.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MaterialFileInputModule} from 'ngx-material-file-input';
+import {ServiceService} from './service.service';
 
 @NgModule({
   declarations: [
@@ -27,17 +32,24 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     DetailComponent,
     UsersComponent,
     CardComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    PageNotFoundComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MaterialFileInputModule,
+    ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [
+    ServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

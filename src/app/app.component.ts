@@ -1,17 +1,27 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 
+import {ServiceService} from './service.service';
+import {AddCategoryComponent} from './add-category/add-category.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+
+
   title = 'Forum';
   opened = true;
   width;
   sidemode = 'side';
 
-  constructor() { }
+  clickCnt = 0;
+  // @ts-ignore
+  constructor(public share: ServiceService) {
+    share.icon = 'menu';
+  }
+
 
   ngOnInit(): void {
     this.width = window.innerWidth;

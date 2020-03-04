@@ -1,7 +1,7 @@
 <mat-sidenav-container>
   <mat-sidenav class="sidenav" #sidenav [mode]="sidemode" [(opened)]="opened">
     <div class="info">
-      <img src="../../../assets/avatar.gif" alt="">
+      <img src="assets/avatar.gif" alt="">
       <!--      <button mat-button [mat-menu-trigger-for]="appMenu" class="user-logo"></button>-->
       <p class="mat-body-strong">Firstname Lastname</p>
       <p>email@domainname.com</p>
@@ -20,8 +20,8 @@
   <mat-sidenav-content class="content-area">
     <mat-toolbar color="accent" class="mat-elevation-z8">
 
-      <!--  <mat-icon color="black" >poll</mat-icon>-->
-      <h2 class="toolbar-title" routerLink="/main">Forum </h2>
+        <mat-icon color="black" routerLink="/main" class="cur">{{share.icon}}</mat-icon>
+      <h2 class="toolbar-title">{{ share.title }} </h2>
 
       <!-- This fills the remaining space of the current row -->
       <span class="example-fill-remaining-space"></span>
@@ -35,13 +35,14 @@
 
     <mat-menu #appMenu="matMenu">
       <button mat-menu-item  routerLink="/categories/add"><mat-icon>plus_one</mat-icon>New category</button>
-      <button mat-menu-item><mat-icon>post_add</mat-icon> New post</button>
-      <button mat-menu-item><mat-icon>person_add</mat-icon>New user</button>
+      <button mat-menu-item routerLink="/discussions/add"><mat-icon>post_add</mat-icon> New post</button>
+      <button mat-menu-item routerLink="/users/add"><mat-icon>person_add</mat-icon>New user</button>
     </mat-menu>
 
 
     <!--Menu-->
     <div class="ex-container inner-block">
+
 
       <router-outlet></router-outlet>
 

@@ -1,11 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {ServiceService} from '../../service.service';
 
-// export interface Category {
-//   // name: string;
-//   text: string;
-//   img: string;
-//   title: string;
-// }
 export interface Card {
   img: string;
   title: string;
@@ -32,7 +27,10 @@ export class MainComponent implements OnInit {
     {title: 'Project Managment', text: 'Description of Project Managment Category', img: 'https://cdn3.iconfinder.com/data/icons/design-and-development-15/256/87-512.png'}
   ];
 
-  constructor() { }
+  constructor(public share: ServiceService) {
+    share.title = 'Forum';
+    share.icon = 'menu';
+  }
 
   ngOnInit(): void {
 

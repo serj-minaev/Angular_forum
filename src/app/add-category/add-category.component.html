@@ -1,2 +1,27 @@
-<p>add-category works!</p>
-<h1>lshdflkhdskfhkjds</h1>
+<mat-card>
+  <h2>Add category</h2>
+
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Category title</mat-label>
+      <input matInput placeholder="Enter title" [formControl]="nameControl" >
+    </mat-form-field>
+
+    <mat-form-field>
+      <ngx-mat-file-input placeholder="Img file only" [accept]="'.png,.jpg'"></ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Category description </mat-label>
+      <textarea matInput placeholder="Enter description"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button (click)="addCard()" color="primary">Add</button>
+
+  </form>
+</mat-card>
+
+
+

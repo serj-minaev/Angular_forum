@@ -17,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -35,8 +36,9 @@ const MaterialComponents = [
   MatInputModule,
   MatExpansionModule,
   MatButtonToggleModule,
-  MatListModule
-]
+  MatListModule,
+  MatFormFieldModule
+];
 
 @NgModule({
   declarations: [ ],
